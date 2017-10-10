@@ -9,5 +9,4 @@ function movies (state =movies_json,action) {
             return state;
     }
 }
-
 export default movies;
