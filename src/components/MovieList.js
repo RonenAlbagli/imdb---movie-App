@@ -2,8 +2,21 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { showMovies } from '../actions';
+import SelectedMovie from './SelectedMovie';
 
 class MovieList extends Component {
+
+    constructor() {
+        super() ;
+
+        this.state = {
+            showDeatils: false
+        }
+    }
+    changeStats(){
+        this.setState({showDeatils:true})
+    }
+
     render(){
         return(
             <div>
@@ -16,12 +29,21 @@ class MovieList extends Component {
                     
                     <li key={movie.title}>
                         <div>{movie.title}</div>
-                        <div onClick={()=>this.props.showMovies(movie.imdbId)}>+</div>
+                        <div onClick={()=>this.props.showMovies(movie.imdbId) & this.changeStats()}>+
+
+                        </div>
                    </li>
+                   
                         )
                     })
                     } 
                 </ul>
+                {
+                            this.state.showDeatils ?
+                            <SelectedMovie/>
+                            :
+                            <div></div>
+                        }
             </div>
         )
     }

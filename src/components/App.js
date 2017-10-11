@@ -1,7 +1,7 @@
 import React , { Component } from 'react';
 
 import MovieList from './MovieList';
-import SelectedMovie from './SelectedMovie';
+
 
 class App extends Component{
     render(){
@@ -12,7 +12,7 @@ class App extends Component{
             <MovieList/>
         </div>
         <div>
-                <SelectedMovie/>
+                {/* <SelectedMovie/> */}
         </div>
 
             </div>
