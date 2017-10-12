@@ -1,0 +1,18 @@
+.list-middle {
+    text-align: center
+}
+
+body {
+    background-image: url('../assets/background.jpg');
+    height: 100%;
+    background-size: cover;
+    background-repeat: none;
+    opacity: 0.8; 
+}
+
+.list-item{
+    display: inline-block;
+}
+h3 {
+    color: white;
+}

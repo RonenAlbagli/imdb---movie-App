@@ -4,6 +4,8 @@ import { bindActionCreators } from 'redux';
 import { showMovies } from '../actions';
 import SelectedMovie from './SelectedMovie';
 
+
+
 class MovieList extends Component {
 
     constructor() {
@@ -19,17 +21,17 @@ class MovieList extends Component {
 
     render(){
         return(
-            <div>
+            <div className="list-middle" >
                 <h3>Here you can find movie from 1930-2017 </h3>
 
-                <ul>
+                <ul className="list-group ">
                     {
                         this.props.movies.map(movie => {
                         return(
                     
-                    <li key={movie.title}>
-                        <div>{movie.title}</div>
-                        <div onClick={()=>this.props.showMovies(movie.imdbId) & this.changeStats()}>+
+                    <li className="list-group-item" key={movie.title}>
+                        <div className="list-item">{movie.title}</div>
+                        <div className="list-item right-button" onClick={()=>this.props.showMovies(movie.imdbId) & this.changeStats()}> <br/> +
 
                         </div>
                    </li>

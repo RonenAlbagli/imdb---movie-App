@@ -2,6 +2,8 @@ import React , { Component } from 'react';
 
 import MovieList from './MovieList';
 
+import '../styles/index.css';
+
 
 class App extends Component{
     render(){
@@ -12,7 +14,7 @@ class App extends Component{
             <MovieList/>
         </div>
         <div>
-                {/* <SelectedMovie/> */}
+             
         </div>
 
             </div>
